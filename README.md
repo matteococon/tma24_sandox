@@ -1,2 +1,5 @@
-# tma24_sandox
- 2024 Test Mobile Automation Sandbox
+# Test Mobile Automation Sandbox
+
+## Index
+
+- How to create this project from scratch: [docs/HISTORY.md](./docs/HISTORY.md)

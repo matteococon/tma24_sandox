@@ -1,0 +1,15 @@
+{
+  "folders": [
+    {
+      "path": ".."
+    }
+  ],
+  "settings": {},
+  "extensions": {
+    "recommendations": [
+      "trunk.io",
+      "bierner.markdown-preview-github-styles",
+      "aaron-bond.better-comments"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dsznajder.es7-react-js-snippets",
+    "dbaeumer.vscode-eslint",
+    "yoavbls.pretty-ts-errors",
+    "jgclark.vscode-todo-highlight",
+    "eamodio.gitlens",
+    "trunk.io",
+    "bierner.markdown-preview-github-styles",
+    "aaron-bond.better-comments"
+  ]
+}
