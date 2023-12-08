@@ -5,7 +5,7 @@ Here the list of instructions to create the project from scratch.
 ## Requirements
 
 - macOS >= 13.6.2 (Ventura)
-- Brew <https://brew.sh/>
+- Brew <https://brew.sh/> (then `brew update`)
 - a new empty folder
 
 ## VSCode/Codium Project Setup: `.vscode`
@@ -121,3 +121,7 @@ trunk check enable swiftlint google-java-format ktlint # swift java kotlin
 trunk check enable prettier # many format, YAML
 # more linters here: <https://docs.trunk.io/check>
 ```
+
+## Create a React Native 2023 sub project
+
+Follow [ReactNativeApp.md](./history/ReactNativeApp.md) guide.
