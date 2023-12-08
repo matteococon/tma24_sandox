@@ -102,10 +102,22 @@ node --version
 npm --version
 ```
 
-## JS Project Setup
-
-install `ESLint`
+## Linting/Spell Project Setup
 
 ```sh
-npm init @eslint/config
+# <https://docs.trunk.io/check/cli>
+trunk --version
+# trunk init
+trunk check enable codespell cspell gitleaks # generic, secrets, etc
+trunk check enable shellcheck # bash
+trunk check enable stylelint # css, scss
+trunk check enable actionlint # github [Actions]
+trunk check enable eslint # js
+trunk check enable markdownlint # markdown
+trunk check enable sort-package-json # package json
+trunk check enable trivy tfsec osv-scanner # security
+trunk check enable svgo # svg
+trunk check enable swiftlint google-java-format ktlint # swift java kotlin
+trunk check enable prettier # many format, YAML
+# more linters here: <https://docs.trunk.io/check>
 ```
