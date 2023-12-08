@@ -1,4 +1,6 @@
-# HISTORY
+# History
+
+Here the list of instructions to create the project from scratch.
 
 ## Requirements
 
@@ -98,4 +100,12 @@ cd ~/; asdf local nodejs 20.10.0
 # check if works
 node --version
 npm --version
+```
+
+## JS Project Setup
+
+install `ESLint`
+
+```sh
+npm init @eslint/config
 ```
