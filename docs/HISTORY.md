@@ -5,20 +5,53 @@ Here the list of instructions to create the project from scratch.
 ## Requirements
 
 - macOS >= 13.6.2 (Ventura)
-- Brew <https://brew.sh/> (then `brew update`)
-- a new empty folder
+- Brew (install instructions: <https://brew.sh/>, then `brew update`
+- Instruction from scratch (this file)
+- The ".apk" of the Subject Under Test (sut) file `sut-app-debug.apk`
 
-## VSCode/Codium Project Setup: `.vscode`
+## Step #0 (optional) - Terminal Setup & VSCodium Project Setup
 
-Install VSCodium <https://vscodium.com/> with:
+### Terminal Setup
+
+Install Iterm2 as default terminal app:
+
+```sh
+brew install iterm2
+```
+
+Run Iterm2 (is in the Application folder) and open a new termial window.
+Now install zsh (`ohmyzsh`) with this command:
+
+```sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+Then install `powerlevel10k` theme for zsh:
+
+```sh
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+```
+
+Open `~/.zshrc` and set the theme as following:
+
+```sh
+ZSH_THEME="powerlevel10k/powerlevel10k"
+```
+
+Now exit from Iterm2 to save the setup and open Iterm2 again.
+Follow the setup on screen with your favourite setup.
+
+### VSCodium Project Setup
+
+Install VSCodium (`vscodium` is an alternative version on VSCode - here more info: <https://vscodium.com/>) with:
 
 `brew install --cask vscodium`
 
-Open VSCodium and choose an empty folder.
+Open VSCodium and choose an new empty folder that will be the root of the project.
 
-Create a `.vscode` folder in the root.
+Create a `./.vscode/` folder in the root of the project.
 
-Create a `.vscode/extensions.json` file with:
+Create a `./.vscode/extensions.json` file with:
 
 ```json
 {
@@ -36,7 +69,7 @@ Create a `.vscode/extensions.json` file with:
 }
 ```
 
-Create a `.vscode/settings.json` file with:
+Create a `./.vscode/settings.json` file with:
 
 ```json
 {
@@ -61,7 +94,7 @@ Create a `.vscode/settings.json` file with:
 
 Create a new configuration for Debugging React Apps with:
 
-- VSCode/Codium Menu "Run" >
+- Codium Menu "Run" >
 - "Add Configurations .." >
 - "Web App (Chrome)"
 - Note: This will create a launch.json file in your .vscode directory.
@@ -70,21 +103,31 @@ Save the workspace with:
 
 - VSCode/Codium Menu "File" >
 - "Save Workspace As.."
-- Save inside `.vscode` folder
+- Save the workspace as `./.vscode/workspace.code-workspace` folder
 
-Close VSCode/Codium and opent the Workspace file.
+Close VSCode/Codium and open the Workspace file.
 
-## Project Setup: `.gitignore`
+## Step #1 - gitignore Project Setup
 
-Create a gitignore for Node, JetBrains IDE, iOS, Android, React-Native.
+Create a new `./.gitignore/` file merging in it the following gitignore files:
 
-Add in it the `.DS_Store` specification.
+- Node: <https://github.com/github/gitignore/blob/main/Node.gitignore>
+- JetBrains IDE <https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore>,
+- Swift <https://github.com/github/gitignore/blob/main/Swift.gitignore>,
+- Android <https://github.com/github/gitignore/blob/main/Android.gitignore>
 
-Remove `.vscode` specification.
+Append at the bottom of `./.gitignore/` the following:
 
-> Note: here more info: <https://github.com/github/gitignore>
+```sh
+.DS_Store
+```
 
-## Node Project Setup
+Remove in `./.gitignore/` the `.vscode` row.
+
+## Step #2 - Node Project Setup
+
+Install latest stable node version running in the terminal in the root of the project
+the following commands:
 
 ```sh
 brew install asdf
@@ -102,7 +145,7 @@ node --version
 npm --version
 ```
 
-## Linting/Spell Project Setup
+## Step #3 (optional) - Linting/Spell Project Setup
 
 ```sh
 # <https://docs.trunk.io/check/cli>
@@ -122,7 +165,7 @@ trunk check enable prettier # many format, YAML
 # more linters here: <https://docs.trunk.io/check>
 ```
 
-## Create a `Node.js` project
+## Step #4 - Create a `Node.js` project
 
 Adding the following `package.json`:
 
@@ -144,4 +187,12 @@ Adding the following `package.json`:
     "wdio": "wdio run ./wdio.conf.ts"
   }
 }
+```
+
+## Step #5 - Install Node packages
+
+Run in the root of the folder:
+
+```sh
+npm install
 ```

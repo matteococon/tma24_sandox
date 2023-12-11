@@ -1,5 +1,12 @@
 # Test Mobile Automation Sandbox
 
-## tbd
+## install node packages
 
-tbd
+## run
+
+```sh
+# cd apps/src-android ; ./gradlew assembleDebug ; cd ../.. ;
+$ANDROID_HOME/emulator/emulator -avd AppiumUITests-generic_13 &
+# appium -p 4723
+npm run wdio
+```
