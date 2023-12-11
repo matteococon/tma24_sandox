@@ -122,6 +122,26 @@ trunk check enable prettier # many format, YAML
 # more linters here: <https://docs.trunk.io/check>
 ```
 
-## Create a React Native 2023 sub project
+## Create a `Node.js` project
 
-Follow [ReactNativeApp.md](./history/ReactNativeApp.md) guide.
+Adding the following `package.json`:
+
+```json
+{
+  "name": "tma_current",
+  "type": "module",
+  "devDependencies": {
+    "@wdio/appium-service": "^8.24.12",
+    "@wdio/cli": "^8.24.16",
+    "@wdio/local-runner": "^8.24.12",
+    "@wdio/mocha-framework": "^8.24.12",
+    "@wdio/spec-reporter": "^8.24.12",
+    "appium-uiautomator2-driver": "^2.34.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "scripts": {
+    "wdio": "wdio run ./wdio.conf.ts"
+  }
+}
+```

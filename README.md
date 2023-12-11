@@ -1,5 +1,5 @@
 # Test Mobile Automation Sandbox
 
-## Index
+## tbd
 
-- How to create this project from scratch: [docs/HISTORY.md](./docs/HISTORY.md)
+tbd
